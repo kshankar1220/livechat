@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <h1 style="text-align:center;">Simple Html Button</h1>
-        <a href="https://github.com/kshankar1220/livechat/blob/main/testHTML.html">
+        <a href="https://htmlpreview.github.io/?https://github.com/kshankar1220/livechat/blob/main/testHTML">
             <button class="btn btn-primary btn-lg">Click</button>
         </a>
     </div>
