@@ -13,8 +13,17 @@
 <script src="https://service.force.com/soap/ajax/13.0/functions.js" type="text/javascript"></script>
 	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+	
+
+	
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
+		
+		 jQuery.noConflict();
+        jQuery(document).ready(function() {
+            alert('hi');
+        });
+		
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
  var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
