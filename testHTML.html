@@ -29,6 +29,7 @@
 		document.body.style.background = "white";
 		}
 		run();
+		/*
 		loadJSON('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON',
 			 function(data) {
 				alert('sucess'+data);
@@ -40,7 +41,7 @@
 				console.error(xhr); 
 			}
 		);
-		
+		*/
  		/*var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
 		console.log('context user' + contextUser);
        		 alert(contextUser );
@@ -91,26 +92,26 @@
 		initESW('https://service.force.com');
 	}
 	
-	
+	/*
 	function loadJSON(path, success, error)
-{
-    var xhr = new XMLHttpRequest();
-	alert(xhr);
-    xhr.onreadystatechange = function()
-    {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                if (success)
-                    success(JSON.parse(xhr.responseText));
-            } else {
-                if (error)
-                    error(xhr);
-            }
-        }
-    };
-	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-    xhr.open("GET", path, true);
-    xhr.send();
-}
+	{
+	    var xhr = new XMLHttpRequest();
+		alert(xhr);
+	    xhr.onreadystatechange = function()
+	    {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+		    if (xhr.status === 200) {
+			if (success)
+			    success(JSON.parse(xhr.responseText));
+		    } else {
+			if (error)
+			    error(xhr);
+		    }
+		}
+	    };
+		xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+	    xhr.open("GET", path, true);
+	    xhr.send();
+	}*/
 </script>
 </html>
