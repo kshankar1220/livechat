@@ -89,7 +89,7 @@
 	function loadJSON(path, success, error)
 {
     var xhr = new XMLHttpRequest();
-	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+	
     xhr.onreadystatechange = function()
     {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -102,6 +102,7 @@
             }
         }
     };
+	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhr.open("GET", path, true);
     xhr.send();
 }
