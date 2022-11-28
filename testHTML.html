@@ -22,6 +22,8 @@
 
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		
+		/*
 		const run = async () => {
 		const response = await fetch('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON');
 		const responseJson = await response.json();
@@ -29,7 +31,8 @@
 		document.body.style.background = "white";
 		}
 		run();
-		/*
+		*/
+		
 		loadJSON('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON',
 			 function(data) {
 				alert('sucess'+data);
@@ -41,7 +44,7 @@
 				console.error(xhr); 
 			}
 		);
-		*/
+		
  		/*var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
 		console.log('context user' + contextUser);
        		 alert(contextUser );
@@ -92,11 +95,12 @@
 		initESW('https://service.force.com');
 	}
 	
-	/*
+	
 	function loadJSON(path, success, error)
 	{
 	    var xhr = new XMLHttpRequest();
-		alert(xhr);
+	    alert(xhr);
+		
 	    xhr.onreadystatechange = function()
 	    {
 		if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -109,9 +113,12 @@
 		    }
 		}
 	    };
-		xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+		
+	    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 	    xhr.open("GET", path, true);
 	    xhr.send();
-	}*/
+	}
+	
+	
 </script>
 </html>
