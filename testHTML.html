@@ -29,7 +29,10 @@
 				console.log(data); 
 		
 			},
-			 function(xhr) { console.error(xhr); }
+			 function(xhr) { 
+				alert(xhr);
+				console.error(xhr); 
+			}
 		);
 		
  		/*var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
