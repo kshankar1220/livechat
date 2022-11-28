@@ -18,9 +18,11 @@
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
- var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
+		
+ 		var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
 		console.log('context user' + contextUser);
-        alert(contextUser );
+       		 alert(contextUser );
+		
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
@@ -47,8 +49,8 @@
 			'LiveChatQueueSales',
 			{
 				baseLiveAgentContentURL: 'https://c.la2-c1cs-ph2.salesforceliveagent.com/content',
-				deploymentId: '5722H000000k9bN',
-				buttonId: '5737A0000008Owo',
+				deploymentId: '5722H000000k9bN',5737A0000008Owo
+				buttonId: '',
 				baseLiveAgentURL: 'https://d.la2-c1cs-ph2.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'LiveChatQueueSales',
 				isOfflineSupportEnabled: true
