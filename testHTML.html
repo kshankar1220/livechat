@@ -25,12 +25,12 @@
 		
 		loadJSON('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON',
 			 function(data) {
-				alert(data);
+				alert('sucess'+data);
 				console.log(data); 
 		
 			},
 			 function(xhr) { 
-				alert(xhr);
+				alert('failure'+xhr);
 				console.error(xhr); 
 			}
 		);
