@@ -105,6 +105,7 @@
 	    {
 		if (xhr.readyState === XMLHttpRequest.DONE) {
 		    if (xhr.status === 200) {
+			    alert('call sucessful');
 			if (success)
 			    success(JSON.parse(xhr.responseText));
 		    } else {
