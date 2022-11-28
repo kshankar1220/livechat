@@ -27,9 +27,16 @@
 		
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
- var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
+		
+		loadJSON('https://equinix--di3--c.sandbox.vf.force.com/resource/1604548398000/ActionPlans_cross',
+			 function(data) { console.log(data); },
+			 function(xhr) { console.error(xhr); }
+		);
+		
+ 		/*var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
 		console.log('context user' + contextUser);
-        alert(contextUser );
+       		 alert(contextUser );
+		 */
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
@@ -75,5 +82,25 @@
 	} else {
 		initESW('https://service.force.com');
 	}
+	
+	
+	function loadJSON(path, success, error)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function()
+    {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                if (success)
+                    success(JSON.parse(xhr.responseText));
+            } else {
+                if (error)
+                    error(xhr);
+            }
+        }
+    };
+    xhr.open("GET", path, true);
+    xhr.send();
+}
 </script>
 </html>
