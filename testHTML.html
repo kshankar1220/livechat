@@ -23,6 +23,7 @@
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 		
+		/*
 		loadJSON('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON',
 			 function(data) {
 				alert('sucess'+data);
@@ -34,6 +35,13 @@
 				console.error(xhr); 
 			}
 		);
+		*/
+		
+		fetch('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON')
+		    .then((response) => response.json())
+		    .then((json) => console.log(json));
+		
+		
 		
  		/*var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
 		console.log('context user' + contextUser);
