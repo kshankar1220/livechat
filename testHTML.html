@@ -114,9 +114,9 @@
 		}
 	    };
 		
-	    
+	    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 	    xhr.open("GET", path, true);
-		xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+		
 	    xhr.send();
 	}
 	
