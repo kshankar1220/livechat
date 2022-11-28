@@ -22,7 +22,13 @@
 
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-		
+		const run = async () => {
+		const response = await fetch('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON');
+		const responseJson = await response.json();
+		responseJson.forEach( (e) => document.write(e.label + "<br/>"));
+		document.body.style.background = "white";
+		}
+		run();
 		loadJSON('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON',
 			 function(data) {
 				alert('sucess'+data);
