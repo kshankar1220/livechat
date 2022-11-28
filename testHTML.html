@@ -23,8 +23,7 @@
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 		
-		/*
-		loadJSON('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON.json',
+		loadJSON('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON',
 			 function(data) {
 				alert('sucess'+data);
 				console.log(data); 
@@ -35,13 +34,6 @@
 				console.error(xhr); 
 			}
 		);
-		*/
-		
-		fetch('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON')
-		    .then((response) => response.json())
-		    .then((json) => console.log(json));
-		
-		
 		
  		/*var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
 		console.log('context user' + contextUser);
@@ -92,5 +84,26 @@
 	} else {
 		initESW('https://service.force.com');
 	}
+	
+	
+	function loadJSON(path, success, error)
+{
+    var xhr = new XMLHttpRequest();
+	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.onreadystatechange = function()
+    {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                if (success)
+                    success(JSON.parse(xhr.responseText));
+            } else {
+                if (error)
+                    error(xhr);
+            }
+        }
+    };
+    xhr.open("GET", path, true);
+    xhr.send();
+}
 </script>
 </html>
