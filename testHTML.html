@@ -33,6 +33,7 @@
 		run();
 		*/
 		
+		/*
 		loadJSON('https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON',
 			 function(data) {
 				alert('sucess'+data);
@@ -44,6 +45,16 @@
 				console.error(xhr); 
 			}
 		);
+		*/
+		const xhr = new XMLHttpRequest();
+		xhr.open('GET', 'https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON', true);
+
+		xhr.onload = () => {
+		  // Request finished. Do processing here.
+			alert('call sucessful');
+		};
+
+		xhr.send(null);
 		
  		/*var contextUser = sforce.apex.execute("myClass", "getContextUserName", {});
 		console.log('context user' + contextUser);
