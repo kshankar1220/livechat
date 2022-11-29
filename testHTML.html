@@ -47,11 +47,17 @@
 		);
 		*/
 		const xhr = new XMLHttpRequest();
-		alert('call initiation2');
+		alert('call initiation3');
 		//xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 		xhr.setRequestHeader("Access-Control-Allow-Origin", "https://htmlpreview.github.io");
 		xhr.setRequestHeader("Access-Control-Allow-Origin", "https://github.com");
 		
+		xhr.addHeader('Access-Control-Max-Age', '86400');
+		xhr.addHeader('Access-Control-Allow-Credentials', 'Server,range,hdntl,hdnts');
+		xhr.addHeader('Access-Control-Expose-Headers', 'Server,range,hdntl,hdnts');
+		xhr.addHeader('Access-Control-Allow-Headers', 'origin,range,hdntl,hdnts');
+		xhr.addHeader('Access-Control-Allow-Origin', '*');
+		xhr.addHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
 		
 		xhr.open('GET', 'https://equinix--di3.sandbox.file.force.com/servlet/servlet.FileDownload?file=0157A0000017PHG', false);
 
