@@ -47,13 +47,13 @@
 		);
 		*/
 		const xhr = new XMLHttpRequest();
-		alert('call initiation1');
+		alert('call initiation2');
 		//xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 		xhr.setRequestHeader("Access-Control-Allow-Origin", "https://htmlpreview.github.io");
 		xhr.setRequestHeader("Access-Control-Allow-Origin", "https://github.com");
 		
 		
-		xhr.open('GET', 'https://equinix--di3--c.sandbox.vf.force.com/resource/1669632094000/languageJSON', true);
+		xhr.open('GET', 'https://equinix--di3.sandbox.file.force.com/servlet/servlet.FileDownload?file=0157A0000017PHG', true);
 
 		xhr.onload = () => {
 		  // Request finished. Do processing here.
