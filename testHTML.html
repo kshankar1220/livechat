@@ -48,10 +48,10 @@
 		);
 		*/
 		const xhr = new XMLHttpRequest();
-		alert('call initiation8');
+		alert('call initiation9');
 		
-		//xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-		xhr.setRequestHeader("Access-Control-Allow-Origin", "https://www.htmlpreview.github.io");
+		xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+		/*xhr.setRequestHeader("Access-Control-Allow-Origin", "https://www.htmlpreview.github.io");
 		xhr.setRequestHeader("Access-Control-Allow-Origin", "https://github.com");
 		
 		xhr.setRequestHeader('Access-Control-Max-Age', '86400');
@@ -60,7 +60,7 @@
 		xhr.setRequestHeader('Access-Control-Allow-Headers', 'origin,range,hdntl,hdnts');
 		xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 		xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
-		
+		*/
 		xhr.open('GET', 'https://equinix--di3.sandbox.my.salesforce.com/sfc/p/7A0000009yzu/a/7A0000008iq6/Z7Ih2.IAWAa2NKG9jUXlBbHZYbTVH7fMNK.iUCxnblQ');
 
 		xhr.onload = () => {
