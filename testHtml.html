@@ -1,5 +1,6 @@
 <html>
 <style type='text/css'>
+	/*
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #ED1010 !important;
 		font-family: "Arial", sans-serif;
@@ -7,10 +8,19 @@
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: 1px solid #ED1010 !important;
 	}
+	*/
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
+	
+	embedded_svc.addEventHandler("onSettingsCallCompleted", function() {
+		console.log("onInvitationResourceLoaded event was fired.");
+		document.querySelector('.embeddedServiceHelpButton .helpButton .uiButton').setAttribute("style", "background-color:#ED1010;")
+    
+    	});
+
+	
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
