@@ -64,5 +64,10 @@
 	} else {
 		initESW('https://service.force.com');
 	}
+	embedded_svc.addEventHandler("onSettingsCallCompleted", function() {
+		console.log("onInvitationResourceLoaded event was fired.");
+		document.querySelector('.embeddedServiceHelpButton .helpButton .uiButton').setAttribute("style", "background-color:#ED1010;")
+    
+    	});
 </script>
 </html>
